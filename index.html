@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Estação Meteorológica | 1º DS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Mini Estação Meteorológica | 1º DS</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projeto">Projeto</a></li>
+        <li><a href="#historico">Centro Histórico</a></li>
+        <li><a href="#qualidade">Qualidade do Ar</a></li>
+        <li><a href="#arduino">Arduino</a></li>
+        <li><a href="#clima">Histórico Climático</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#footer">Contato</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="tag">Projeto Interdisciplinar</span>
+      <h1>Monitoramento da Qualidade do Ar no Centro Histórico de Santana de Parnaíba</h1>
+      <p>
+        Um projeto interdisciplinar de História unindo patrimônio histórico,
+        sustentabilidade, tecnologia e inovação através de uma Mini Estação
+        Meteorológica.
+      </p>
+      <a href="#projeto" class="btn">Explorar Projeto</a>
+    </div>
+  </section>
+
+  <section class="section" id="projeto">
+    <div class="container grid-2">
+      <div>
+        <h2>Propósito do Projeto</h2>
+        <p>
+          Este projeto foi desenvolvido para compreender como a qualidade do ar
+          influencia diretamente a preservação do patrimônio histórico e a vida
+          da população no Centro Histórico de Santana de Parnaíba.
+        </p>
+        <p>
+          A proposta foi idealizada pelo Professor Maicon como parte de um
+          projeto interdisciplinar de História, incentivando os estudantes a
+          relacionarem meio ambiente, urbanização, patrimônio cultural e
+          tecnologia.
+        </p>
+        <p>
+          A parte tecnológica foi fortalecida com a construção de uma Mini
+          Estação Meteorológica utilizando Arduino, com orientação do Professor
+          Rafael, responsável pelo suporte técnico e experimental.
+        </p>
+      </div>
+
+      <div class="image-placeholder large-image">
+        <img src="img/estacao.metereologica.png" alt="estacao" class="real-image large-image">
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="historico">
+    <div class="container grid-2 reverse">
+      <div class="image-placeholder large-image">
+<img src="img/centro-historico.jpg" alt="centro" class="real-image large-image">      </div>
+
+      <div>
+        <h2>Centro Histórico de Santana de Parnaíba</h2>
+        <p>
+          O Centro Histórico representa uma importante herança cultural e
+          arquitetônica da cidade, preservando construções coloniais, igrejas,
+          ruas de pedra e elementos fundamentais da memória local.
+        </p>
+        <p>
+          A preservação desse patrimônio depende também das condições
+          ambientais, especialmente da qualidade do ar, da umidade e da ação de
+          poluentes atmosféricos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="qualidade">
+    <div class="container">
+      <h2>Qualidade do Ar</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Poluentes Atmosféricos</h3>
+          <p>
+            A presença de gases e partículas pode acelerar a deterioração de
+            estruturas históricas e afetar a saúde da população.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Umidade e Temperatura</h3>
+          <p>
+            Alterações climáticas influenciam diretamente o desgaste de
+            materiais antigos e a conservação urbana.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Monitoramento Contínuo</h3>
+          <p>
+            O acompanhamento dos dados permite ações preventivas e melhores
+            estratégias de preservação ambiental.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="arduino">
+    <div class="container grid-2">
+      <div>
+        <h2>Arduino e Sensores</h2>
+        <p>
+          A Mini Estação Meteorológica foi construída com Arduino e sensores
+          ambientais capazes de monitorar temperatura e umidade em tempo real.
+        </p>
+        <p>
+          O desenvolvimento foi realizado com apoio do Professor Rafael, que
+          orientou a montagem, testes e funcionamento da estrutura tecnológica.
+        </p>
+        <p>
+          Essa integração entre História e Tecnologia tornou o projeto mais
+          completo e aplicável à realidade local.
+        </p>
+      </div>
+
+      <div class="image-placeholder large-image">
+        <img src="img/arduino-sensores.png" alt="sensores" class="real-image large-image"> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="clima">
+    <div class="container">
+      <h2>Histórico Climático</h2>
+      <p class="section-text">
+        Comparação entre dados antigos e atuais com foco na preservação do
+        patrimônio histórico e análise da qualidade ambiental. Os dados foram obtidos a partir da Mini Estação Metereológica, do Instituto Nacional de Meteorologia (INMET) e complementados com relatórios da CETESB, responsáveis pelo monitoramento climático e da qualidade do ar no estado de São Paulo.
+      </p>
+
+      <div class="chart-box">
+        <canvas id="climateChart"></canvas>
+      </div>
+
+      <div class="cards dashboard">
+
+  <div class="cards dashboard">
+
+  <div class="card status-moderado">
+    <h3>15/04/2019</h3>
+    <div class="dados">
+      <span>🌡 26°C</span>
+      <span>💧 55%</span>
+    </div>
+    <div class="qualidade">🌫 Moderada</div>
+    <p>Início de queda na umidade e aumento leve de poluentes.</p>
+  </div>
+
+  <div class="card status-ruim">
+    <h3>10/09/2020</h3>
+    <div class="dados">
+      <span>🌡 30°C</span>
+      <span>💧 35%</span>
+    </div>
+    <div class="qualidade">🌫 Ruim</div>
+    <p>Período crítico de seca e alta concentração de poluentes.</p>
+  </div>
+
+  <div class="card status-bom">
+    <h3>25/01/2021</h3>
+    <div class="dados">
+      <span>🌡 24°C</span>
+      <span>💧 80%</span>
+    </div>
+    <div class="qualidade">🌫 Boa</div>
+    <p>Alta umidade e melhora significativa da qualidade do ar.</p>
+  </div>
+
+  <div class="card status-bom">
+    <h3>18/04/2022</h3>
+    <div class="dados">
+      <span>🌡 25°C</span>
+      <span>💧 62%</span>
+    </div>
+    <div class="qualidade">🌫 Boa/Moderada</div>
+    <p>Condições estáveis com boa dispersão de poluentes.</p>
+  </div>
+
+  <div class="card status-ruim">
+    <h3>12/08/2023</h3>
+    <div class="dados">
+      <span>🌡 29°C</span>
+      <span>💧 38%</span>
+    </div>
+    <div class="qualidade">🌫 Ruim</div>
+    <p>Retorno de condições secas e piora da qualidade do ar.</p>
+  </div>
+
+  <div class="card status-ruim">
+    <h3>20/04/2024</h3>
+    <div class="dados">
+      <span>🌡 27°C</span>
+      <span>💧 48%</span>
+    </div>
+    <div class="qualidade">🌫 Ruim</div>
+    <p>Baixa umidade e presença elevada de poluentes.</p>
+  </div>
+
+  <div class="card status-bom">
+    <h3>29/04/2026</h3>
+    <div class="dados">
+      <span>🌡 26°C</span>
+      <span>💧 60%</span>
+    </div>
+    <div class="qualidade">🌫 Boa</div>
+    <p>Melhora das condições ambientais e recuperação do ar.</p>
+  </div>
+
+</div>
+
+</div>
+
+      
+    </div>
+  </section>
+
+  <section class="section light" id="galeria">
+    <div class="container">
+      <h2>Acervo de Imagens</h2>
+
+      <div class="gallery-grid">
+        <div class="image-placeholder"><img src="img/img-antiga-1.jpg" alt="antigo" class="real-image large-image"> </div>
+        <div class="image-placeholder"><img src="img/img-antiga-2.jpg" alt="antigo" class="real-image large-image"> </div>
+        <div class="image-placeholder"><img src="img/img-antiga-3.jpg" alt="antigo" class="real-image large-image"></div>
+        <div class="image-placeholder"><img src="img/projeto-confecção.png" alt="projeto" class="real-image large-image"></div>
+        <div class="image-placeholder"><img src="img/guarda-chuvas.png" alt="guarda-chuva" class="real-image large-image"></div>
+        <div class="image-placeholder"><img src="img/ruas.png" alt="ruas" class="real-image large-image"></div>
+        <div class="image-placeholder"><img src="img/igreja.png" alt="igreja" class="real-image large-image"></div>
+        <div class="image-placeholder"><img src="img/confeccao2.jpg" alt="confeccao" class="real-image large-image"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container footer-content">
+      <h2>Mini Estação Meteorológica</h2>
+      <p>
+        Projeto desenvolvido por estudantes do 1º DS e apresentado na Semana Paulo Freire com foco na preservação do
+        patrimônio histórico e monitoramento ambiental.
+      </p>
+      <p>
+        Projeto interdisciplinar de História idealizado pelo Professor Maicon.
+      </p>
+      <p>
+        Desenvolvimento tecnológico com apoio e orientação do Professor Rafael.
+      </p>
+      <p class="copy">Felipe Lopes | Gustavo Oliveira | Gustavo Santos | José Lucas | Luca Bernardo | Professor Maicon | Professor Rafael</p>
+    <p class="copy">© 2026 - 1º DS - Projeto Escolar</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
